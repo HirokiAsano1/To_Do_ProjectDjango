@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block page_title %}
+{% if to_do.pk %}
+    Editar Tarefa
+
+  {% else %}
+    Cadastrar Tarefa
+  {% endif %}
+{% endblock page_title %}
+
+{% block content %}
+      
+      {% if to_do.pk %}
+       <h1>Editar Tarefa</h1>
+       
+       {% else %}
+       <h1>Cadastrar Tarefa</h1>
+       {% endif %}
+
+
+       <form method="POST">
+        {% csrf_token %}
+        
+        
+        <div class="mb-3">
+            <label for="id_title" class="form-label RequiredField">Título</label>
+            <input type="text" name="title" id="id_title" class="form-control" placeholder="Digite o título" value="{{ form.title.value|default_if_none:'' }}">
+            <div id="titleHelp" class="form-text">Dê um título à sua tarefa.</div>
+        </div>
+    
+        
+        <div class="mb-3">
+            <label for="id_deadline" class="form-label requiredField">Data de Entrega</label>
+            <input type="text" name="deadline" id="id_deadline" class="form-control" value="{{ form.deadline.value|default_if_none:'' }}">
+            <div id="deadlineHelp" class="form-text">Escolha uma data de entrega para a tarefa.</div>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="{% url 'todo_list' %}" class="btn btn-secondary">Cancelar</a>
+      </form>
+{% endblock content %}
