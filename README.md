@@ -33,3 +33,30 @@ Este é um projeto de To-do List construído com Django, que permite ao usuário
 
    ```bash
    cd django-todo-list
+   
+3. Crie um ambiente virtual:
+
+   ```bash
+   python -m venv venv
+
+4. Ative o ambiente virtual:
+
+   ```bash
+   venv\Scripts\activate
+
+5. Instale as dependências:
+
+   ```bash
+   pip install -r requirements.txt
+
+6. python manage.py migrate
+
+   ```bash
+   python manage.py migrate
+
+7. Inicie o servidor:
+   
+   ```bash
+   python manage.py runserver
+
+8. Acesse a aplicação em http://127.0.0.1:8000.
