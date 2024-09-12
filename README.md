@@ -17,6 +17,14 @@ Este é um projeto de To-do List construído com Django, que permite ao usuário
 - **Data de Entrega**: Prazo para concluir a tarefa.
 - **Finalizado em**: Data em que a tarefa foi marcada como concluída (preenchido automaticamente).
 
+## Rotas (URLs)
+
+- `/`: Página inicial, onde todas as tarefas são listadas.
+- `/create`: Página para adicionar uma nova tarefa.
+- `/update/<id>`: Página para editar uma tarefa existente.
+- `/delete/<id>`: Endpoint para deletar uma tarefa.
+- `/complete/<id>`: Endpoint para marcar uma tarefa como concluída.
+
 ## Tecnologias Utilizadas
 
 - **Django**: Framework web utilizado para o desenvolvimento do back-end.
